@@ -1,28 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap");
+
 * {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+$border-color: gray;
+$border-radius: 15px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+
 body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  width: 95%;
+  max-width: 1297.7px;
 }
 
 header {
   padding: 7px;
   width: 100%;
   a {
+    font-weight: 300;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
   }
 }
 
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+
+  .key {
+    width: 600px !important;
+    button {
+      background-color: white;
+      border: 1px solid #a9a9a9;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .input-box {
+    textarea {
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      height: 10rem;
+      outline: none;
+      padding: 15px;
+      width: 30rem;
+      resize: none;
+    }
+  }
+}
+
 footer {
   bottom: 0;
+  font-weight: 300;
   margin: 0 auto;
   padding: 5px;
+}
+
+#key {
+  border: 1px solid grey;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  //font-size: 1.2rem;
+  height: 50px;
+  outline: none;
+  padding: 15px;
+  width: 400px;
 }
