@@ -7,8 +7,28 @@
     <title>cryption</title>
   </head>
   <body>
-    <header><a href=".">cryption</a></header>
-    <main></main>
-    <footer>jethro estangki &copy; 2020</footer>
+    <div class="main-container">
+      <header><a href="#">cryption</a></header>
+      <main>
+        <div class="container key">
+          <input type="text" id="key" placeholder="Key" />
+          <button id="generate">Generate Random Key</button>
+        </div>
+        <div class="container">
+          <div class="input-box">
+            <textarea
+              id="plaintext"
+              placeholder="Enter plaintext to get started"
+            ></textarea>
+          </div>
+          <div class="input-box">
+            <textarea id="ciphertext" placeholder="Ciphertext"></textarea>
+          </div>
+        </div>
+      </main>
+      <footer>jethro estangki &copy; 2020</footer>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
