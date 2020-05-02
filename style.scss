@@ -44,20 +44,23 @@ main {
   flex-direction: column;
   height: 50%;
   justify-content: space-around;
+  padding-bottom: 31px;
 
   .key {
-    width: 600px !important;
     button {
       background-color: white;
       border: 1px solid #a9a9a9;
       border-radius: $border-radius;
       box-shadow: $box-shadow;
       cursor: pointer;
-      padding: 10px;
+      margin-left: 15px;
+      margin-right: auto;
+      padding: 15px;
     }
   }
 
   .container {
+    align-items: center;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -89,7 +92,29 @@ footer {
   box-shadow: $box-shadow;
   //font-size: 1.2rem;
   height: 50px;
+  margin-left: auto;
   outline: none;
   padding: 15px;
   width: 400px;
+}
+
+@media only screen and (max-width: 420px) {
+  main {
+    .container {
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    .key {
+      align-items: center;
+      button {
+        margin: unset;
+      }
+    }
+    .input-box {
+      textarea {
+        width: 20rem;
+      }
+    }
+  }
 }
